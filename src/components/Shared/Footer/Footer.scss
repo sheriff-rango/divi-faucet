@@ -1,0 +1,45 @@
+footer {
+    width: 100%;
+    min-height: 180px;
+    background: darken(white, 5%);
+
+    div.wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 15px;
+    }
+
+    div.fhead {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+
+        img {
+            height: 24px;
+            margin: 0 15px 0 0;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+    }
+
+    div.menu-items {
+        display: flex;
+        flex-wrap: wrap;
+        a {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            height: 40px;
+            color: black;
+
+            @media (max-width: 640px) {
+                width: 100%;
+            }
+        }
+    }
+}

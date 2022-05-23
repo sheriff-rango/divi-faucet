@@ -1,0 +1,51 @@
+div.api-wrap {
+    width: 100%;
+    max-width: 1200px;
+    min-height: calc(100vh - 230px);
+    padding: 15px;
+    margin: auto;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+
+    @media (max-width: 640px) {
+        font-size: 18px;
+    }
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    font-family: monospace;
+
+    @media (max-width: 640px) {
+        font-size: 14px;
+    }
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+
+    @media (max-width: 640px) {
+        font-size: 14px;
+    }
+}
+
+p {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+    &.label {
+        font-weight: bold;
+    }
+
+    @media (max-width: 640px) {
+        font-size: 12px;
+        margin: 0 0 10px 0;
+    }
+}

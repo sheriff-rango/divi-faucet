@@ -1,0 +1,160 @@
+div.page-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    min-height: calc(100vh - 230px);
+    margin: auto;
+    padding: 15px;
+}
+
+div.page-error {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 1111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 120px 0;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 300;
+        padding: 0 0 30px 0;
+    }
+
+    p {
+        font-size: 18px;
+        a {
+            padding: 5px;
+            color: rgba(15,63,140,1);
+            font-weight: bold;
+        }
+    }
+}
+
+div.faucet {
+    width: 100%;
+
+    h2 {
+        font-size: 24px;
+        font-weight: 300;
+        margin: 0 0 10px 0;
+
+        @media (max-width: 640px) {
+            font-size: 18px;
+            text-align: center;
+            margin: 0 0 15px 0;
+        }
+    }
+
+    h3 {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0 0 15px 0;
+
+        @media (max-width: 640px) {
+            font-size: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+            font-weight: bold;
+
+            img {
+                height: 18px;
+                margin: 0 10px 0 0;
+            }
+
+            @media (max-width: 640px) {
+                margin: 10px;
+            }
+        }
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 0 0 10px 0;
+
+        @media (max-width: 640px) {
+            font-size: 12px;
+        }
+    }
+
+    div.inline-input {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    input {
+        width: 100%;
+        max-width: 640px;
+        height: 50px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        background: darken(white, 5%);
+        padding: 0 15px;
+        margin: 0 0 15px 0;
+
+        @media (max-width: 640px) {
+            font-size: 14px;
+            height: 40px;
+        }
+    }
+
+    a.button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 15px 15px;
+        width: 180px;
+        height: 50px;
+        border-radius: 5px;
+        background: linear-gradient(107deg, rgba(77,118,255,1) 0%, rgba(15,63,140,1) 100%);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+
+        @media (max-width: 640px) {
+            font-size: 14px;
+            height: 40px;
+        }
+    }
+
+    div.message {
+        position: absolute;
+        left: 0;
+        top: 65px;
+        background: darken(white, 15%);
+        padding: 15px;
+        width: 100%;
+        max-width: 640px;
+        height: 50px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
+
+        transition: opacity 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        opacity: 0;
+        pointer-events: none;
+        &.active {
+            opacity: 1;
+        }
+    }
+}

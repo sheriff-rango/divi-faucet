@@ -1,0 +1,48 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/morgan": "^1.7.37",
+    "@types/node": "^12.12.14",
+    "@types/react": "^16.9.13",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/superagent": "^4.1.4",
+    "express": "^4.17.1",
+    "fs-jetpack": "^2.2.3",
+    "gh-pages": "^2.1.1",
+    "morgan": "^1.9.1",
+    "node-sass": "^4.13.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "superagent": "^5.1.2",
+    "typescript": "^3.7.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "gh-pages": "npm run build && node bin/copy.js && gh-pages -d build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build-server": "tsc api/server.ts --outDir dist",
+    "server": "npm run build-server && node dist/Server.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
